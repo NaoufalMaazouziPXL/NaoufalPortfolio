@@ -16,6 +16,7 @@ body {
     margin: 0 5%;
     display: flex;
     justify-content: flex-end;
+    top: 0;
     position: sticky;
 }
 
@@ -51,6 +52,7 @@ body {
     font-family: "Forma DJR Display", "sans-serif";
     font-weight: 00;
     font-style: normal;
+    text-align: center;
 }
 
 .hero-banner h2 {
@@ -63,7 +65,6 @@ body {
 }
 
 .nav-element {
-    padding-bottom: 5px;
     display: flex;
     justify-content: flex-end;
 }
@@ -71,7 +72,7 @@ body {
 .scrolling-word,
 .hidden-word {
     transition: opacity 0.3s;
-    font-size: 13pt;
+    font-size: 15pt;
 }
 
 .scrolling-word {
@@ -116,3 +117,85 @@ a {
 section {
     margin-bottom: 150px;
 }
+
+
+.about-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 10% 10% 10%;
+}
+
+.dot-span {
+    color: white;
+}
+
+.main-banner h3, span {
+    font-family: "Forma DJR Display", "sans-serif";
+    font-weight: 00;
+    font-style: normal;
+    font-size: 3rem;
+    z-index: 50;
+}
+
+p {
+    font-family: "Forma DJR Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    z-index: 50;
+}
+
+.underlined-text {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.underlined-text:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    width: 60%;
+    height: 12px;
+    background: linear-gradient(to right, white, transparent);
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: -1;
+}
+
+.icon-span {
+    font-family: "Forma DJR Display", "sans-serif";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding-left: 5px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex-basis: 50%; /* Adjust the width of the boxes as needed */
+    padding: 20px;
+    border: white 1px solid;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+}
+
+img {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-basis: 100%;
+    }
+}
+
