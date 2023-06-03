@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Forma DJR Display", "sans-serif";
+    font-weight: 00;
+    font-style: normal;
+}
+
+body {
+    background-color: #161616;
+}
+
+.hero-nav-banner {
+    margin: 0 5%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.hero-container {
+    margin: 0 5%;
+}
+
+.hero-background {
+    padding-top: 5%;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/stacked-waves-haikei.svg");
+}
+
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner h1 {
+    font-size: 4rem;
+    font-family: "Forma DJR Display", "sans-serif";
+    font-weight: 00;
+    font-style: normal;
+}
+
+.hero-banner h2 {
+    font-weight: lighter;
+}
+
+.word-container {
+    position: relative;
+    display: block;
+}
+
+.nav-element {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scrolling-word,
+.hidden-word {
+    transition: opacity 0.3s;
+    font-size: 13pt;
+}
+
+.scrolling-word {
+    opacity: 0.5;
+}
+
+.scrolling-word:hover {
+    opacity: 0;
+}
+
+.hidden-word {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: top 0.3s, opacity 0.3s;
+}
+
+.word-container:hover .hidden-word {
+    top: 0;
+    opacity: 1;
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 10% 5% 10%;
+}
+
+.return-button {
+    font-weight: 100;
+}
+
+a .return-button:hover {
+    font-weight: 00;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 150px;
+}
