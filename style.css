@@ -15,8 +15,8 @@ body {
 .hero-nav-banner {
     margin: 0 5%;
     display: flex;
-    justify-content: flex-end;
-    top: 0;
+    justify-content: space-between;
+    top: 30px;
     position: sticky;
 }
 
@@ -62,11 +62,7 @@ body {
 .word-container {
     position: relative;
     display: block;
-}
-
-.nav-element {
-    display: flex;
-    justify-content: flex-end;
+    height: 30px !important;
 }
 
 .scrolling-word,
@@ -77,14 +73,19 @@ body {
 
 .scrolling-word {
     opacity: 0.5;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .scrolling-word:hover {
     opacity: 0;
 }
 
+
 .hidden-word {
     position: absolute;
+
     top: 100%;
     left: 0;
     opacity: 0;
@@ -93,8 +94,9 @@ body {
 
 .word-container:hover .hidden-word {
     top: 0;
-    opacity: 1;
+    opacity: 1;;
 }
+
 
 .hero-wrapper {
     display: flex;
@@ -102,16 +104,17 @@ body {
     margin: 5% 10% 5% 10%;
 }
 
-.return-button {
-    font-weight: 100;
-}
 
 a .return-button:hover {
-    font-weight: 00;
+    font-weight: 00 !important;
+    color: white !important;
+
 }
 
 a {
     text-decoration: none;
+    color: white !important;
+
 }
 
 section {
@@ -123,6 +126,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5% 10% 10% 10%;
+}
+
+.tools-banner {
+    display: flex;
+    justify-content: space-between;
     margin: 5% 10% 10% 10%;
 }
 
@@ -139,30 +148,11 @@ section {
 }
 
 p {
-    font-family: "Forma DJR Display", sans-serif;
-    font-weight: 400;
+    font-family: "Forma DJR Display Hairline", sans-serif;
+    font-weight: 200;
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 50;
-}
-
-.underlined-text {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-
-}
-
-.underlined-text:before {
-    content: "";
-    position: absolute;
-    left: 30%;
-    width: 60%;
-    height: 12px;
-    background: linear-gradient(to right, white, transparent);
-    transform: translateX(-50%);
-    bottom: 10px;
-    z-index: -1;
 }
 
 .icon-span {
@@ -174,24 +164,49 @@ p {
 }
 
 .box-container {
+    margin-top: 45px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .box {
-    flex-basis: 50%; /* Adjust the width of the boxes as needed */
-    padding: 20px;
-    border: white 1px solid;
+    flex-basis: 50%;
     box-sizing: border-box;
+    padding-bottom: 20px;
     height: 300px;
     width: 300px;
 }
 
-img {
-    min-height: 100%;
-    min-width: 100%;
+.box-image img {
+    height: 100%;
+    width: 100%;
 }
+
+.logo-name-wrapper {
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-identifier-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main-tools-banner {
+    width: 40%;
+}
+
+.main-tools-banner h1 {
+    font-size: 40pt;
+    padding-bottom: 30pt;
+}
+
+.icon-wrapper {
+    display: flex;
+}
+
 
 @media (max-width: 768px) {
     .box {
@@ -199,3 +214,189 @@ img {
     }
 }
 
+#figma, #html5, #css, #javascript, #bootstrap5 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 25px;
+}
+
+.icon-wrapper {
+    border: white 0.5px solid;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: background-color 0.6s;
+}
+
+
+.icon-wrapper:hover {
+    background: rgba(129, 129, 129, 0.25);
+}
+
+.logo-name-wrapper h1 {
+    font-weight: 300;
+    font-size: 15pt;
+}
+
+.footer-background {
+    height: 25vh;
+    background-image: url("assets/footer-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 2s;
+}
+
+.hidden2 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 3s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cube-logo img {
+    height: 2.5rem;
+}
+
+.arrow-downwards {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#arrow-down {
+    height: 2.5rem;
+}
+
+.container-tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-tools > div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.container-tools > div:last-child {
+    margin-left: auto;
+}
+
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+    .tools-banner {
+        flex-direction: column;
+    }
+
+    .icon-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.first-social-container h2,
+.second-social-container h2,
+.third-social-container h2 {
+    margin-bottom: 20px !important;
+    font-weight: 300 !important;
+    font-size: 15pt !important;
+}
+
+.first-social-container h2:hover,
+.second-social-container h2:hover,
+.third-social-container h2:hover {
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+}
+
+
+
+.main-footer-container {
+    margin: 5% 10% 10% 10%;
+!important;
+}
+
+.footer-background {
+    height: 25vh !important;
+    background-image: url("assets/footer-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.footer-title {
+    margin-bottom: 15px !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .social-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-name-wrapper {
+        margin-right: 100px;
+    }
+
+
+}
+
+@media only screen and (device-width: 414px)  {
+
+    .footer-background {
+        height: 0;
+        background-image: url("assets/footer-bg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main-tools-banner {
+        width: 100%;
+    }
+}
+
+#wpl1-button {
+    margin-top: 25px;
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    color: white;
+    background-color: transparent;
+    font-weight: 400;
+    border-color: white;
+}
+
+#wpl1-button:hover {
+    border-color: black;
+    color: black;
+    background-color: white;
+}
+
+.title-banner {
+    margin-bottom: 25pt;
+}
+
+.sub-banner h4 {
+    font-size: 25pt;
+}
+
+.sub-banner p {
+    margin-bottom: 15pt;
+}
