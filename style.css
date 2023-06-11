@@ -191,16 +191,21 @@ p {
 
 .logo-identifier-wrapper {
     display: flex;
-    align-items: center;
+    align-items: center !important;
 }
 
+.logo-identifier-wrapper h3 {
+    font-weight: 200;
+    font-size: 12.5pt;
+ }
+
 .main-tools-banner {
-    width: 40%;
+    width: 35%;
 }
 
 .main-tools-banner h1 {
     font-size: 40pt;
-    padding-bottom: 30pt;
+    padding-bottom: 15pt;
 }
 
 .icon-wrapper {
@@ -214,7 +219,7 @@ p {
     }
 }
 
-#figma, #html5, #css, #javascript, #bootstrap5 {
+#figma, #html5, #css, #javascript, #bootstrap5, #photoshop, #illustrator {
     width: 2rem;
     height: 2rem;
     margin-right: 25px;
