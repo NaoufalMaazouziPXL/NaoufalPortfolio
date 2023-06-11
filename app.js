@@ -1,11 +1,13 @@
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     let myDiv = document.querySelector('.myDiv');
     let arrow = document.querySelector('.arrow-downwards');
 
     myDiv.classList.add('visible');
+    document.body.style.overflow = 'hidden';
 
-    setTimeout(function () {
+    setTimeout(function() {
         arrow.classList.add('visible');
+        document.body.style.overflow = '';
     }, 2000);
 });
 
