@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: "Forma DJR Display", "sans-serif";
     font-style: normal;
 }
 
@@ -221,6 +220,7 @@ p {
 #scroll-heading-work,
 #scroll-heading-workplace {
     font-size: 8.31rem;
+    font-family: "Forma DJR Display", sans-serif;
     color: transparent;
     -webkit-text-stroke: 2px #ffffff;
     -webkit-text-fill-color: transparent;
