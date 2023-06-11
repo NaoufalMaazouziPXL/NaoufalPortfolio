@@ -4,7 +4,6 @@
     box-sizing: border-box;
     color: white;
     font-family: "Forma DJR Display", "sans-serif";
-    font-weight: 00;
     font-style: normal;
 }
 
@@ -49,8 +48,6 @@ body {
 
 .hero-banner h1 {
     font-size: 4rem;
-    font-family: "Forma DJR Display", "sans-serif";
-    font-weight: 00;
     font-style: normal;
     text-align: center;
 }
@@ -106,7 +103,6 @@ body {
 
 
 a .return-button:hover {
-    font-weight: 00 !important;
     color: white !important;
 
 }
@@ -186,15 +182,12 @@ section {
 }
 
 .main-banner h3, span {
-    font-family: "Forma DJR Display", "sans-serif";
-    font-weight: 00;
     font-style: normal;
     font-size: 3rem;
     z-index: 50;
 }
 
 p {
-    font-family: "Forma DJR Display Hairline", sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 1rem;
@@ -202,7 +195,6 @@ p {
 }
 
 .icon-span {
-    font-family: "Forma DJR Display", "sans-serif";
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
