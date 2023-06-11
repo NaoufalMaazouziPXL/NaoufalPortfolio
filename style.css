@@ -158,7 +158,6 @@ section {
 
 .normal-state:hover::after {
     width: 100%;
-
 }
 
 .content-deliverable {
@@ -187,7 +186,7 @@ section {
 }
 
 p {
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
     font-size: 1rem;
     z-index: 50;
@@ -238,7 +237,6 @@ p {
 .icon-wrapper {
     display: flex;
 }
-
 
 #figma, #html5, #css, #javascript, #bootstrap5, #photoshop, #illustrator {
     width: 2rem;
