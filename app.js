@@ -1,15 +1,15 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     let myDiv = document.querySelector('.myDiv');
     let arrow = document.querySelector('.arrow-downwards');
 
     myDiv.classList.add('visible');
 
-    setTimeout(function() {
+    setTimeout(function () {
         arrow.classList.add('visible');
     }, 2000);
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY || window.pageYOffset;
     let cube = document.getElementById('cube');
 
@@ -17,4 +17,3 @@ window.addEventListener('scroll', function() {
 
     cube.style.transform = 'rotateY(' + rotation + 'deg)';
 });
-
