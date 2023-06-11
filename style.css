@@ -129,6 +129,52 @@ section {
     margin: 5% 10% 10% 10%;
 }
 
+.deliverable-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30pt;
+}
+
+.deliverable-wrapper {
+    border-radius: 10px;
+    height: 14rem;
+    width: 20rem;
+    background-color: #252525;
+    padding: 15px 0 0 15px;
+    box-shadow: #1a1d20;
+}
+
+.normal-state {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.normal-state::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.normal-state:hover::after {
+    width: 100%;
+
+}
+
+.content-deliverable {
+    margin-top: 25pt;
+}
+
+.carousel-caption {
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.27);
+}
+
 .tools-banner {
     display: flex;
     justify-content: space-between;
@@ -163,26 +209,6 @@ p {
     padding-left: 5px;
 }
 
-.box-container {
-    margin-top: 45px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.box {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-    height: 300px;
-    width: 300px;
-}
-
-.box-image img {
-    height: 100%;
-    width: 100%;
-}
-
 .logo-name-wrapper {
     margin-right: 200px;
     display: flex;
@@ -197,7 +223,16 @@ p {
 .logo-identifier-wrapper h3 {
     font-weight: 200;
     font-size: 12.5pt;
- }
+}
+
+#scroll-heading-about,
+#scroll-heading-work,
+#scroll-heading-workplace {
+    font-size: 8.31rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-fill-color: transparent;
+}
 
 .main-tools-banner {
     width: 35%;
@@ -212,12 +247,6 @@ p {
     display: flex;
 }
 
-
-@media (max-width: 768px) {
-    .box {
-        flex-basis: 100%;
-    }
-}
 
 #figma, #html5, #css, #javascript, #bootstrap5, #photoshop, #illustrator {
     width: 2rem;
@@ -243,7 +272,6 @@ p {
     font-weight: 300;
     font-size: 15pt;
 }
-
 
 
 .hidden {
@@ -292,18 +320,6 @@ p {
 }
 
 
-/* Media query for mobile view */
-@media (max-width: 767px) {
-    .tools-banner {
-        flex-direction: column;
-    }
-
-    .icon-wrapper {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
 .social-container {
     display: flex;
     justify-content: space-between;
@@ -317,7 +333,7 @@ p {
 
 .footer-background {
     height: 10vh;
-    background-color: #131212;
+    background-color: #090909;
 }
 
 .social-container {
@@ -330,9 +346,7 @@ p {
 }
 
 
-
-
-#wpl1-button {
+#wpl1-button, #reflection-button {
     margin-top: 35px;
     width: 150px;
     height: 40px;
@@ -342,8 +356,7 @@ p {
 
 }
 
-
-#wpl1-button:hover {
+#wpl1-button:hover, #reflection-button:hover {
     background-color: white;
     color: black !important;
 }
@@ -358,16 +371,6 @@ p {
 
 .sub-banner p {
     margin-bottom: 15pt;
-}
-
-
-#scroll-heading-about,
-#scroll-heading-work,
-#scroll-heading-workplace {
-    font-size: 8.31rem;
-    color: transparent;
-    -webkit-text-stroke: 2px #ffffff;
-    -webkit-text-fill-color: transparent;
 }
 
 .social-link i:hover {
@@ -404,17 +407,26 @@ p {
     display: flex;
 }
 
-.carousel-caption {
-    border-radius: 25px;
-    background-color: #3a3a3a;
+@media (max-width: 767px) {
+    .tools-banner {
+        flex-direction: column;
+    }
+
+    .icon-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
-.carousel-caption:hover {
-    background-color: rgba(0, 0, 0, 0.27);
-}
+@media only screen and (max-width: 414px) {
+    .footer-background {
+        height: 0vh;
+    }
 
+    .main-tools-banner {
+        width: 100%;
+    }
 
-@media only screen and (max-width: 768px) {
     .social-container {
         flex-direction: column;
         align-items: center;
@@ -424,20 +436,12 @@ p {
         margin-right: 100px;
     }
 
-
-}
-
-@media only screen and (device-width: 414px)  {
-
-    .footer-background {
-        height: 0;
-        background-image: url("assets/footer-bg.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
+    .deliverable-container {
+        flex-direction: column;
     }
 
-    .main-tools-banner {
-        width: 100%;
+    .deliverable-wrapper {
+        margin-bottom: 15pt;
     }
 
     #scroll-heading-about,
@@ -448,5 +452,4 @@ p {
         -webkit-text-stroke: 1px #ffffff;
         -webkit-text-fill-color: transparent;
     }
-
 }
