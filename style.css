@@ -346,6 +346,21 @@ p {
 
 }
 
+.wpl3-button {
+    margin-top: 35px;
+    margin-right: 10px;
+    width: 150px;
+    height: 40px;
+    border: white solid 1px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.wpl3-button:hover {
+    background-color: white;
+    color: black !important;
+}
+
 #wpl1-button:hover, #reflection-button:hover {
     background-color: white;
     color: black !important;
